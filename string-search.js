@@ -3,9 +3,9 @@ const products=[
     'iphone 1TB camera flashlight',
     'yellow laptop with black camera',
     '1x59 Lenovo commercial yoga laptop',
-    'LG supernova laptop',
+    'dell LG supernova laptop',
     'HTC low price phone',
-    'purple color phone with Laptop'
+    'Dell purple color phone with Laptop'
 ];
 
 const searching ='laptop';
@@ -14,6 +14,30 @@ const searching ='laptop';
 const output =[];
 for(const product of products){
     if(product.toLowerCase().indexOf(searching.toLowerCase()) != -1){
+        output.push(product);
+    }
+}
+// console.log(output);
+
+//includes useCase
+for (const product of products){
+    if(product.toLowerCase().includes(searching.toLowerCase())){
+        output.push(product);
+    }
+}
+// console.log(output);
+
+//startswith usecase
+for(const product of products){
+    if(product.toLowerCase().startsWith(searching.toLowerCase())){
+        output.push(product);
+    }
+}
+// console.log(output);
+
+//endswith usecase
+for(const product of products){
+    if(product.toLowerCase().endsWith(searching.toLowerCase())){
         output.push(product);
     }
 }
